@@ -46,9 +46,14 @@
       align-items: center;
     }
 
+    /* ロゴ画像をモバイルでも適切なサイズに制御 */
     .store img {
-      max-height: 32px;
+      max-height: 32px;   /* 高さを固定上限 */
+      max-width: 120px;   /* 幅の暴走を防止 */
+      height: auto;
       width: auto;
+      object-fit: contain;
+      flex-shrink: 0;      /* 文字量で圧縮されないように */
     }
 
     .store span {
@@ -65,6 +70,7 @@
       text-decoration: none;
       border-radius: 5px;
       font-size: 14px;
+      flex-shrink: 0;
     }
   </style>
 </head>
