@@ -4,193 +4,387 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ジョニー・エスプレッソ ストアリンク集</title>
+  <meta name="description" content="ザ・クロマニヨンズ 29thシングル『ジョニー・エスプレッソ』2026年12月16日発売。ショップ別特典と予約リンクまとめ。">
   <style>
+    :root {
+      --bg: #0b0a09;
+      --surface: #16130f;
+      --surface-2: #1f1a15;
+      --line: #2e2720;
+      --text: #f4efe8;
+      --muted: #a39a8f;
+      --accent: #e0a44a;
+      --accent-ink: #1a1208;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      padding: 0;
-      background: #000;
-      color: #fff;
-      font-family: 'Helvetica Neue', sans-serif;
-      text-align: center;
+      background:
+        radial-gradient(120% 60% at 50% 0%, #2a1d10 0%, rgba(11,10,9,0) 60%),
+        var(--bg);
+      color: var(--text);
+      font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      padding: 20px;
       max-width: 560px;
-      margin: auto;
+      margin: 0 auto;
+      padding: 40px 16px 56px;
+    }
+
+    /* ヒーロー */
+    .hero {
+      text-align: center;
+      margin-bottom: 32px;
     }
 
     .cover {
       width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.55);
     }
 
-    h1 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .release {
-      color: #999;
-      margin-bottom: 25px;
-    }
-
-    .info {
-      background: #111;
-      border-radius: 10px;
-      padding: 12px 14px;
-      margin-bottom: 25px;
-      text-align: left;
-      font-size: 13px;
-      line-height: 1.6;
-      color: #ccc;
-    }
-
-    .info p {
+    .artist {
       margin: 0 0 10px;
+      font-size: 12px;
+      letter-spacing: .32em;
+      color: var(--muted);
     }
 
-    .info p:last-child {
-      margin-bottom: 0;
+    .title {
+      margin: 0 0 18px;
+      font-size: clamp(30px, 9vw, 44px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: .02em;
     }
 
-    .info strong {
-      color: #fff;
-    }
-
-    .store {
-      background: #222;
-      border-radius: 10px;
-      margin: 12px 0;
-      padding: 14px;
-      display: flex;
-      justify-content: space-between;
+    .meta {
+      display: inline-flex;
       align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+      font-size: 14px;
     }
 
-    /* ロゴ画像をモバイルでも適切なサイズに制御 */
-    .store img {
-      max-height: 32px;   /* 高さを固定上限 */
-      max-width: 120px;   /* 幅の暴走を防止 */
-      height: auto;
-      width: auto;
-      object-fit: contain;
-      flex-shrink: 0;      /* 文字量で圧縮されないように */
+    .badge {
+      padding: 3px 10px;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
     }
 
-    .store span {
+    .date {
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    /* 見出し */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 14px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .24em;
+      color: var(--muted);
+    }
+
+    .section-title::after {
+      content: "";
       flex: 1;
-      text-align: left;
-      margin-left: 12px;
+      height: 1px;
+      background: var(--line);
+    }
+
+    /* ショップ */
+    .shops {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .shop {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .shop-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .shop-logo {
+      width: 84px;
+      height: 32px;
+      object-fit: contain;
+      object-position: left center;
+      flex-shrink: 0;
+    }
+
+    .gift {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      column-gap: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .gift-label {
+      flex-basis: 100%;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: var(--accent);
+    }
+
+    .gift-note {
+      flex-basis: 100%;
+      margin-top: 2px;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .shop-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      min-height: 46px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+    }
+
+    .btn:active { transform: scale(.98); }
+
+    .btn-rec {
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    .btn-rec:hover { background: #ecb862; }
+
+    .btn-cd {
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .btn-cd:hover { border-color: var(--muted); }
+
+    .btn:focus-visible {
+      outline: 2px solid var(--text);
+      outline-offset: 2px;
+    }
+
+    .arrow { font-weight: 400; }
+
+    /* 商品情報 */
+    .products {
+      display: grid;
+      gap: 12px;
+    }
+
+    .product {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 18px;
       font-size: 14px;
     }
 
-    .store a {
-      background: #334;
-      color: #fff;
-      padding: 8px 14px;
-      text-decoration: none;
-      border-radius: 5px;
+    .product h3 {
+      margin: 0 0 4px;
+      font-size: 15px;
+    }
+
+    .product .spec {
+      margin: 0 0 10px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .04em;
+    }
+
+    .product .spec strong {
+      color: var(--text);
       font-size: 14px;
-      flex-shrink: 0;
+      margin-left: 6px;
+    }
+
+    .product ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .product li {
+      display: flex;
+      gap: 10px;
+      padding: 6px 0;
+      border-top: 1px dashed var(--line);
+    }
+
+    .product li span {
+      min-width: 3.2em;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.9;
+    }
+
+    .product .note {
+      margin: 10px 0 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .footnote {
+      margin: 32px 0 0;
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- ジャケット画像が決まったら差し替え -->
-    <!-- <img src="cro_new_cover.jpg" alt="ジョニー・エスプレッソ ジャケット" class="cover"> -->
+    <header class="hero">
+      <!-- ジャケット画像が公開されたら差し替え -->
+      <!-- <img src="cro_new_cover.jpg" alt="ジョニー・エスプレッソ ジャケット" class="cover"> -->
 
-    <h1>ザ・クロマニヨンズ<br>『ジョニー・エスプレッソ』</h1>
-    <p class="release">29th Single / 2026年12月16日 Release</p>
+      <p class="artist">THE CRO-MAGNONS</p>
+      <h1 class="title">ジョニー・<br>エスプレッソ</h1>
+      <p class="meta">
+        <span class="badge">29th SINGLE</span>
+        <span class="date">2026.12.16 WED RELEASE</span>
+      </p>
+    </header>
 
-    <div class="info">
-      <p><strong>CD</strong>：BVCL 1568 / ￥1,300（税込）<br>
-      初回仕様のみ紙ジャケット仕様（無くなり次第プラケースに切り替わります）<br>
-      1. ジョニー・エスプレッソ<br>
-      2. 映画 レコード パン屋さん(試食)</p>
-      <p><strong>完全生産限定 7inchアナログ盤</strong>：BVKL 26 / ￥1,900（税込）<br>
-      Side-A. ジョニー・エスプレッソ<br>
-      Side-B. 映画 レコード パン屋さん(試食)</p>
-    </div>
+    <section>
+      <h2 class="section-title">SHOP / 特典</h2>
+      <div class="shops">
+      <article class="shop">
+        <div class="shop-head">
+          <img class="shop-logo" src="rakutenbooksjapan_ondark.svg" alt="楽天ブックス">
+          <p class="gift"><span class="gift-label">特典</span><span class="gift-name">ポストカード</span></p>
+        </div>
+        <div class="shop-buttons">
+          <a class="btn btn-rec" href="https://a.r10.to/h5TdCE" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://a.r10.to/h5dNSJ" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
 
-    <!-- Rakuten -->
-    <div class="store">
-      <img src="rakutenbooksjapan_ondark.svg" alt="Rakuten Books">
-      <span>レコード (ポストカード付き)</span>
-      <a href="https://a.r10.to/h5TdCE" target="_blank" rel="noopener">ここに行く</a>
-    </div>
+      <article class="shop">
+        <div class="shop-head">
+          <img class="shop-logo" src="amazonbluray_ondark.svg" alt="Amazon">
+          <p class="gift"><span class="gift-label">特典</span><span class="gift-name">メガジャケ</span></p>
+        </div>
+        <div class="shop-buttons">
+          <a class="btn btn-rec" href="https://link.amazon/A02aDxBwU" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://link.amazon/B092D2Jhe" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
 
-    <div class="store">
-      <img src="rakutenbooksjapan_ondark.svg" alt="Rakuten Books">
-      <span>CD (ポストカード付き)</span>
-      <a href="https://a.r10.to/h5dNSJ" target="_blank" rel="noopener">ここに行く</a>
-    </div>
+      <article class="shop">
+        <div class="shop-head">
+          <img class="shop-logo" src="sevennet.png" alt="セブンネット">
+          <p class="gift"><span class="gift-label">特典</span><span class="gift-name">アクリルチャームキーホルダー</span></p>
+        </div>
+        <div class="shop-buttons">
+          <a class="btn btn-rec" href="https://x.gd/EKD0kB" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://x.gd/SMB56" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
 
-    <!-- Amazon -->
-    <div class="store">
-      <img src="amazonbluray_ondark.svg" alt="Amazon">
-      <span>レコード (メガジャケ付き)</span>
-      <a href="https://link.amazon/A02aDxBwU" target="_blank" rel="noopener">ここに行く</a>
-    </div>
+      <article class="shop">
+        <div class="shop-head">
+          <img class="shop-logo" src="hmv.png" alt="HMV">
+          <p class="gift"><span class="gift-label">特典</span><span class="gift-name">ポストカード</span><span class="gift-note">楽天ブックスとは別柄</span></p>
+        </div>
+        <div class="shop-buttons">
+          <a class="btn btn-rec" href="https://click.linksynergy.com/deeplink?id=vhDtF8bTnA0&mid=2880&murl=https%3A%2F%2Fwww.hmv.co.jp%2Fartist_%25E3%2582%25B6%25E3%2583%25BB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2583%258B%25E3%2583%25A8%25E3%2583%25B3%25E3%2582%25BA_000000000349534%2Fitem_%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25BD-7%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2582%25B7%25E3%2583%25B3%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589_17291779" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://click.linksynergy.com/deeplink?id=vhDtF8bTnA0&mid=2880&murl=https%3A%2F%2Fwww.hmv.co.jp%2Fartist_%25E3%2582%25B6%25E3%2583%25BB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2583%258B%25E3%2583%25A8%25E3%2583%25B3%25E3%2582%25BA_000000000349534%2Fitem_%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25BD_17291778" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
 
-    <div class="store">
-      <img src="amazonbluray_ondark.svg" alt="Amazon">
-      <span>CD (メガジャケ付き)</span>
-      <a href="https://link.amazon/B092D2Jhe" target="_blank" rel="noopener">ここに行く</a>
-    </div>
+      <article class="shop">
+        <div class="shop-head">
+          <img class="shop-logo" src="diskunion_ondark.svg" alt="ディスクユニオン">
+          <p class="gift"><span class="gift-label">特典</span><span class="gift-name">特製缶バッジ</span><span class="gift-note">直径2.5cm</span></p>
+        </div>
+        <div class="shop-buttons">
+          <a class="btn btn-rec" href="https://diskunion.net/detail/1009308921" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://diskunion.net/detail/1009308919" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
 
-    <!-- 7net -->
-    <div class="store">
-      <img src="sevennet.png" alt="セブンネット">
-      <span>レコード (アクリルチャームキーホルダー付き)</span>
-      <a href="https://x.gd/EKD0kB" target="_blank" rel="noopener">ここに行く</a>
-    </div>
+      <article class="shop">
+        <div class="shop-head">
+          <img class="shop-logo" src="towerrecords_ondark.svg" alt="タワーレコード">
+          <p class="gift"><span class="gift-label">特典</span><span class="gift-name">スマホサイズステッカー</span><span class="gift-note">横5.5cm × 縦9.1cm</span></p>
+        </div>
+        <div class="shop-buttons">
+          <a class="btn btn-rec" href="https://tower.jp/item/8172551" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://tower.jp/item/8172550" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      </div>
+    </section>
 
-    <div class="store">
-      <img src="sevennet.png" alt="セブンネット">
-      <span>CD (アクリルチャームキーホルダー付き)</span>
-      <a href="https://x.gd/SMB56" target="_blank" rel="noopener">ここに行く</a>
-    </div>
-    <!-- HMV -->
-    <div class="store">
-      <img src="hmv.png" alt="HMV">
-      <span>レコード (ポストカード付き／楽天とは別柄)</span>
-      <a href="https://click.linksynergy.com/deeplink?id=vhDtF8bTnA0&mid=2880&murl=https%3A%2F%2Fwww.hmv.co.jp%2Fartist_%25E3%2582%25B6%25E3%2583%25BB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2583%258B%25E3%2583%25A8%25E3%2583%25B3%25E3%2582%25BA_000000000349534%2Fitem_%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25BD-7%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2582%25B7%25E3%2583%25B3%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589_17291779" target="_blank" rel="noopener">ここに行く</a>
-    </div>
+    <section>
+      <h2 class="section-title">RELEASE INFO</h2>
+      <div class="products">
+        <div class="product">
+          <h3>完全生産限定 7inchアナログ盤</h3>
+          <p class="spec">BVKL 26<strong>￥1,900</strong>（税込）</p>
+          <ol>
+            <li><span>SIDE A</span>ジョニー・エスプレッソ</li>
+            <li><span>SIDE B</span>映画 レコード パン屋さん(試食)</li>
+          </ol>
+        </div>
 
-    <div class="store">
-      <img src="hmv.png" alt="HMV">
-      <span>CD (ポストカード付き／楽天とは別柄)</span>
-      <a href="https://click.linksynergy.com/deeplink?id=vhDtF8bTnA0&mid=2880&murl=https%3A%2F%2Fwww.hmv.co.jp%2Fartist_%25E3%2582%25B6%25E3%2583%25BB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2583%258B%25E3%2583%25A8%25E3%2583%25B3%25E3%2582%25BA_000000000349534%2Fitem_%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25BD_17291778" target="_blank" rel="noopener">ここに行く</a>
-    </div>
+        <div class="product">
+          <h3>CD</h3>
+          <p class="spec">BVCL 1568<strong>￥1,300</strong>（税込）</p>
+          <ol>
+            <li><span>01</span>ジョニー・エスプレッソ</li>
+            <li><span>02</span>映画 レコード パン屋さん(試食)</li>
+          </ol>
+          <p class="note">※初回仕様のみ紙ジャケット仕様（無くなり次第プラケースに切り替わります）</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- disk union -->
-    <div class="store">
-      <img src="diskunion_ondark.svg" alt="disk union">
-      <span>レコード (特製缶バッジ付き／直径2.5cm)</span>
-      <a href="https://diskunion.net/detail/1009308921" target="_blank" rel="noopener">ここに行く</a>
-    </div>
-
-    <div class="store">
-      <img src="diskunion_ondark.svg" alt="disk union">
-      <span>CD (特製缶バッジ付き／直径2.5cm)</span>
-      <a href="https://diskunion.net/detail/1009308919" target="_blank" rel="noopener">ここに行く</a>
-    </div>
-
-    <!-- Tower Records -->
-    <div class="store">
-      <img src="towerrecords_ondark.svg" alt="Tower Records">
-      <span>レコード (スマホサイズステッカー付き／5.5×9.1cm)</span>
-      <a href="https://tower.jp/item/8172551" target="_blank" rel="noopener">ここに行く</a>
-    </div>
-
-    <div class="store">
-      <img src="towerrecords_ondark.svg" alt="Tower Records">
-      <span>CD (スマホサイズステッカー付き／5.5×9.1cm)</span>
-      <a href="https://tower.jp/item/8172550" target="_blank" rel="noopener">ここに行く</a>
-    </div>
+    <p class="footnote">特典の詳細・在庫状況は各ショップのページでご確認ください。</p>
   </div>
 </body>
 </html>
