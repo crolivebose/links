@@ -130,11 +130,21 @@
     }
 
     .shop-logo {
-      width: 84px;
-      height: 32px;
-      object-fit: contain;
-      object-position: left center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 96px;
+      height: 48px;
+      padding: 7px 10px;
+      background: #fff;
+      border-radius: 10px;
       flex-shrink: 0;
+    }
+
+    .shop-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
 
     .gift {
@@ -143,7 +153,7 @@
       flex-wrap: wrap;
       align-items: baseline;
       column-gap: 8px;
-      font-size: 14px;
+      font-size: clamp(13px, 3.6vw, 15px);
       font-weight: 700;
       line-height: 1.4;
     }
@@ -166,7 +176,7 @@
 
     .shop-buttons {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 8px;
     }
 
@@ -175,8 +185,9 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      min-height: 46px;
-      padding: 10px 12px;
+      min-height: 48px;
+      padding: 10px 8px;
+      white-space: nowrap;
       border-radius: 10px;
       font-size: 14px;
       font-weight: 700;
@@ -186,20 +197,24 @@
 
     .btn:active { transform: scale(.98); }
 
-    .btn-rec {
+    .btn-rec,
+    .btn-cd {
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1.5px solid var(--accent);
+    }
+
+    .btn-rec:hover,
+    .btn-cd:hover {
       background: var(--accent);
       color: var(--accent-ink);
     }
 
-    .btn-rec:hover { background: #ecb862; }
-
-    .btn-cd {
-      background: var(--surface-2);
-      color: var(--text);
-      border: 1px solid var(--line);
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
     }
-
-    .btn-cd:hover { border-color: var(--muted); }
 
     .btn:focus-visible {
       outline: 2px solid var(--text);
@@ -294,67 +309,67 @@
       <div class="shops">
       <article class="shop">
         <div class="shop-head">
-          <img class="shop-logo" src="rakutenbooksjapan_ondark.svg" alt="楽天ブックス">
+          <span class="shop-logo"><img src="rakutenbooksjapan_ondark.svg" alt="楽天ブックス"></span>
           <p class="gift"><span class="gift-label">特典</span><span class="gift-name">ポストカード</span></p>
         </div>
         <div class="shop-buttons">
-          <a class="btn btn-rec" href="https://a.r10.to/h5TdCE" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-cd" href="https://a.r10.to/h5dNSJ" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-rec" href="https://a.r10.to/h5TdCE" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width=".8" opacity=".6"/><circle cx="12" cy="12" r="2.6" fill="currentColor"/></svg>7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://a.r10.to/h5dNSJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 5a7 7 0 0 0-7 7" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>CD<span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="shop">
         <div class="shop-head">
-          <img class="shop-logo" src="amazonbluray_ondark.svg" alt="Amazon">
+          <span class="shop-logo"><img src="amazon_onlight.svg" alt="Amazon"></span>
           <p class="gift"><span class="gift-label">特典</span><span class="gift-name">メガジャケ</span></p>
         </div>
         <div class="shop-buttons">
-          <a class="btn btn-rec" href="https://link.amazon/A02aDxBwU" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-cd" href="https://link.amazon/B092D2Jhe" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-rec" href="https://link.amazon/A02aDxBwU" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width=".8" opacity=".6"/><circle cx="12" cy="12" r="2.6" fill="currentColor"/></svg>7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://link.amazon/B092D2Jhe" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 5a7 7 0 0 0-7 7" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>CD<span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="shop">
         <div class="shop-head">
-          <img class="shop-logo" src="sevennet.png" alt="セブンネット">
+          <span class="shop-logo"><img src="sevennet.png" alt="セブンネット"></span>
           <p class="gift"><span class="gift-label">特典</span><span class="gift-name">アクリルチャームキーホルダー</span></p>
         </div>
         <div class="shop-buttons">
-          <a class="btn btn-rec" href="https://x.gd/EKD0kB" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-cd" href="https://x.gd/SMB56" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-rec" href="https://x.gd/EKD0kB" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width=".8" opacity=".6"/><circle cx="12" cy="12" r="2.6" fill="currentColor"/></svg>7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://x.gd/SMB56" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 5a7 7 0 0 0-7 7" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>CD<span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="shop">
         <div class="shop-head">
-          <img class="shop-logo" src="hmv.png" alt="HMV">
+          <span class="shop-logo"><img src="hmv.png" alt="HMV"></span>
           <p class="gift"><span class="gift-label">特典</span><span class="gift-name">ポストカード</span><span class="gift-note">楽天ブックスとは別柄</span></p>
         </div>
         <div class="shop-buttons">
-          <a class="btn btn-rec" href="https://click.linksynergy.com/deeplink?id=vhDtF8bTnA0&mid=2880&murl=https%3A%2F%2Fwww.hmv.co.jp%2Fartist_%25E3%2582%25B6%25E3%2583%25BB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2583%258B%25E3%2583%25A8%25E3%2583%25B3%25E3%2582%25BA_000000000349534%2Fitem_%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25BD-7%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2582%25B7%25E3%2583%25B3%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589_17291779" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-cd" href="https://click.linksynergy.com/deeplink?id=vhDtF8bTnA0&mid=2880&murl=https%3A%2F%2Fwww.hmv.co.jp%2Fartist_%25E3%2582%25B6%25E3%2583%25BB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2583%258B%25E3%2583%25A8%25E3%2583%25B3%25E3%2582%25BA_000000000349534%2Fitem_%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25BD_17291778" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-rec" href="https://click.linksynergy.com/deeplink?id=vhDtF8bTnA0&mid=2880&murl=https%3A%2F%2Fwww.hmv.co.jp%2Fartist_%25E3%2582%25B6%25E3%2583%25BB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2583%258B%25E3%2583%25A8%25E3%2583%25B3%25E3%2582%25BA_000000000349534%2Fitem_%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25BD-7%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%2581%25E3%2582%25B7%25E3%2583%25B3%25E3%2582%25B0%25E3%2583%25AB%25E3%2583%25AC%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%2589_17291779" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width=".8" opacity=".6"/><circle cx="12" cy="12" r="2.6" fill="currentColor"/></svg>7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://click.linksynergy.com/deeplink?id=vhDtF8bTnA0&mid=2880&murl=https%3A%2F%2Fwww.hmv.co.jp%2Fartist_%25E3%2582%25B6%25E3%2583%25BB%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%259E%25E3%2583%258B%25E3%2583%25A8%25E3%2583%25B3%25E3%2582%25BA_000000000349534%2Fitem_%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%258B%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A8%25E3%2582%25B9%25E3%2583%2597%25E3%2583%25AC%25E3%2583%2583%25E3%2582%25BD_17291778" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 5a7 7 0 0 0-7 7" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>CD<span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="shop">
         <div class="shop-head">
-          <img class="shop-logo" src="diskunion_ondark.svg" alt="ディスクユニオン">
+          <span class="shop-logo"><img src="diskunion_square.svg" alt="ディスクユニオン"></span>
           <p class="gift"><span class="gift-label">特典</span><span class="gift-name">特製缶バッジ</span><span class="gift-note">直径2.5cm</span></p>
         </div>
         <div class="shop-buttons">
-          <a class="btn btn-rec" href="https://diskunion.net/detail/1009308921" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-cd" href="https://diskunion.net/detail/1009308919" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-rec" href="https://diskunion.net/detail/1009308921" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width=".8" opacity=".6"/><circle cx="12" cy="12" r="2.6" fill="currentColor"/></svg>7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://diskunion.net/detail/1009308919" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 5a7 7 0 0 0-7 7" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>CD<span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="shop">
         <div class="shop-head">
-          <img class="shop-logo" src="towerrecords_ondark.svg" alt="タワーレコード">
+          <span class="shop-logo"><img src="towerrecords_ondark.svg" alt="タワーレコード"></span>
           <p class="gift"><span class="gift-label">特典</span><span class="gift-name">スマホサイズステッカー</span><span class="gift-note">横5.5cm × 縦9.1cm</span></p>
         </div>
         <div class="shop-buttons">
-          <a class="btn btn-rec" href="https://tower.jp/item/8172551" target="_blank" rel="noopener">7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
-          <a class="btn btn-cd" href="https://tower.jp/item/8172550" target="_blank" rel="noopener">CD<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-rec" href="https://tower.jp/item/8172551" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width=".8" opacity=".6"/><circle cx="12" cy="12" r="2.6" fill="currentColor"/></svg>7inch レコード<span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-cd" href="https://tower.jp/item/8172550" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 5a7 7 0 0 0-7 7" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>CD<span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </article>
       </div>
