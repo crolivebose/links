@@ -55,7 +55,7 @@ h1 {
 
 .formats { display: grid; gap: 10px; }
 .format {
-  display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 6px 12px;
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 6px 12px;
   padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
 }
 .format .kind { font-weight: 700; font-size: 15px; }
@@ -128,12 +128,12 @@ footer p { margin: 0; }
 </header>
 <div class="formats">
 <div class="format">
-<span class="kind">CD（通常盤）</span><span></span><span class="price">￥1,300（税込）</span>
+<span class="kind">CD（通常盤）</span><span class="price">￥1,300（税込）</span>
 <span class="sub">初回仕様のみ紙ジャケット仕様（無くなり次第プラケースに切り替わります）／2曲収録</span>
 <span class="codes"><span>品番 BVCL-1568</span><span>JAN 4547366847123</span></span>
 </div>
 <div class="format">
-<span class="kind">7inchアナログ盤（完全生産限定）</span><span></span><span class="price">￥1,900（税込）</span>
+<span class="kind">7inchアナログ盤（完全生産限定）</span><span class="price">￥1,900（税込）</span>
 <span class="sub">Side-A / Side-B の2曲収録</span>
 <span class="codes"><span>品番 BVKL-26</span><span>JAN 4547366847130</span></span>
 </div>
