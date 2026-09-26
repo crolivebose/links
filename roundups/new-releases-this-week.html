@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>今週発売のCD・レコード</title>
-<meta name="description" content="今週発売の商品">
+<meta name="description" content="今週発売の商品です。">
+<meta property="og:title" content="今週発売のCD・レコード">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -46,14 +47,26 @@ text-decoration:none;font-weight:700;background:var(--surface);border:1px solid 
 .stores a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .tag{font-size:12px;font-weight:500;color:var(--muted)}
 .stores a.buy .tag{color:var(--accent)}
-.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.card{display:block;padding:15px 16px;border-radius:12px;background:var(--surface);border:1px solid var(--line);
+.lead{margin:0;font-size:13px;color:var(--muted)}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.list .day{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--accent);
+margin:14px 0 2px;display:flex;align-items:center;gap:10px}
+.list .day::after{content:"";flex:1;height:1px;background:var(--line)}
+.item{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;align-items:center;
+padding:11px 13px;border-radius:11px;background:var(--surface);border:1px solid var(--line);
 text-decoration:none;color:var(--text)}
-.card:hover{border-color:var(--accent)}
-.card .top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
-.card .name{font-weight:700}
-.card .score{font-family:var(--mono);color:var(--accent);font-size:13px}
-.card .why{font-size:12px;color:var(--muted);margin-top:4px}
+.item:hover{border-color:var(--accent)}
+.item:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.thumb{width:72px;height:72px;object-fit:cover;border-radius:11px;background:var(--ground);display:block}
+.thumb--none{background:var(--ground)}
+.item .body{display:grid;gap:3px;min-width:0}
+.item .artist{font-size:12px;color:var(--muted)}
+.item .name{font-weight:700;font-size:16px;line-height:1.35}
+.badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+.badge{font-size:12px;font-weight:500;color:var(--muted);border:1px solid var(--line);
+border-radius:999px;padding:1px 9px;white-space:nowrap}
+.badge--now{color:var(--accent-ink);background:var(--accent);border-color:var(--accent);font-weight:700}
+.badge--quiet{border-style:dashed}
 footer{display:grid;gap:6px;font-size:12px;color:var(--muted)}
 footer a{color:var(--muted)}
 footer p{margin:0}
@@ -62,9 +75,10 @@ footer p{margin:0}
 <body>
 <main class="page">
 <span class="pr">PR・このページはアフィリエイトリンクを含みます</span>
-<header><h1>今週発売のCD・レコード</h1></header>
-<p class="meta">今週発売の商品</p>
-<ul class="list"><li><a class="card" href="https://crolivebose.github.io/links/products/ザローリングストーンズ-ラヴユーライヴ-4988031894675.html"><span class="top"><span class="name">ラヴ・ユー・ライヴ</span><span class="score">66</span></span><span class="why">ザ・ローリング・ストーンズ ／ 発売 2026-09-25</span><span class="why">優先アーティスト（優先度10）・対象ジャンル（洋楽ロック）・今週発売</span></a></li><li><a class="card" href="https://crolivebose.github.io/links/products/ザローリングストーンズ-ブリュッセルアフェア---ライヴ-1973-4988031894668.html"><span class="top"><span class="name">ブリュッセル・アフェア - ライヴ 1973</span><span class="score">66</span></span><span class="why">ザ・ローリング・ストーンズ ／ 発売 2026-09-25</span><span class="why">優先アーティスト（優先度10）・対象ジャンル（洋楽ロック）・今週発売</span></a></li><li><a class="card" href="https://crolivebose.github.io/links/products/ザローリングストーンズ-スティルライフアメリカンコンサート81-4988031894620.html"><span class="top"><span class="name">スティル・ライフ(アメリカン・コンサート&#x27;81)</span><span class="score">66</span></span><span class="why">ザ・ローリング・ストーンズ ／ 発売 2026-09-25</span><span class="why">優先アーティスト（優先度10）・対象ジャンル（洋楽ロック）・今週発売</span></a></li><li><a class="card" href="https://crolivebose.github.io/links/products/ザローリングストーンズ-スティルライフウェンブリースタジアム-1982-4988031894699.html"><span class="top"><span class="name">スティル・ライフ(ウェンブリー・スタジアム 1982)</span><span class="score">66</span></span><span class="why">ザ・ローリング・ストーンズ ／ 発売 2026-09-25</span><span class="why">優先アーティスト（優先度10）・対象ジャンル（洋楽ロック）・今週発売</span></a></li><li><a class="card" href="https://crolivebose.github.io/links/products/ザローリングストーンズ-ストリップト-4988031894644.html"><span class="top"><span class="name">ストリップト</span><span class="score">66</span></span><span class="why">ザ・ローリング・ストーンズ ／ 発売 2026-09-25</span><span class="why">優先アーティスト（優先度10）・対象ジャンル（洋楽ロック）・今週発売</span></a></li><li><a class="card" href="https://crolivebose.github.io/links/products/レッドツェッペリン-ライヴインフランクフルト-1980-4540399326986.html"><span class="top"><span class="name">ライヴ・イン・フランクフルト 1980</span><span class="score">50</span></span><span class="why">レッド・ツェッペリン ／ 発売 2026-09-23</span><span class="why">優先アーティスト（優先度6）・対象ジャンル（洋楽ロック）・今週発売</span></a></li></ul>
+<header><h1>今週発売のCD・レコード</h1>
+<p class="lead">今週発売の商品です。</p>
+</header>
+<ul class="list"><li class="day">9月23日（水）</li><li><a class="item" href="https://crolivebose.github.io/links/products/レッドツェッペリン-ライヴインフランクフルト-1980-4540399326986.html"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/6986/4540399326986.jpg?_ex=600x600" alt="" loading="lazy"><span class="body"><span class="artist">レッド・ツェッペリン</span><span class="name">ライヴ・イン・フランクフルト 1980</span><span class="badges"><span class="badge badge--quiet">1店</span></span></span></a></li><li class="day">9月25日（金）</li><li><a class="item" href="https://crolivebose.github.io/links/products/ザローリングストーンズ-ラヴユーライヴ-4988031894675.html"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/4675/4988031894675.jpg?_ex=600x600" alt="" loading="lazy"><span class="body"><span class="artist">ザ・ローリング・ストーンズ</span><span class="name">ラヴ・ユー・ライヴ</span><span class="badges"><span class="badge badge--quiet">1店</span></span></span></a></li><li><a class="item" href="https://crolivebose.github.io/links/products/ザローリングストーンズ-ブリュッセルアフェア---ライヴ-1973-4988031894668.html"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/4668/4988031894668.jpg?_ex=600x600" alt="" loading="lazy"><span class="body"><span class="artist">ザ・ローリング・ストーンズ</span><span class="name">ブリュッセル・アフェア - ライヴ 1973</span><span class="badges"><span class="badge badge--quiet">1店</span></span></span></a></li><li><a class="item" href="https://crolivebose.github.io/links/products/ザローリングストーンズ-スティルライフアメリカンコンサート81-4988031894620.html"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/4620/4988031894620.jpg?_ex=600x600" alt="" loading="lazy"><span class="body"><span class="artist">ザ・ローリング・ストーンズ</span><span class="name">スティル・ライフ(アメリカン・コンサート&#x27;81)</span><span class="badges"><span class="badge badge--quiet">1店</span></span></span></a></li><li><a class="item" href="https://crolivebose.github.io/links/products/ザローリングストーンズ-スティルライフウェンブリースタジアム-1982-4988031894699.html"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/4699/4988031894699.jpg?_ex=600x600" alt="" loading="lazy"><span class="body"><span class="artist">ザ・ローリング・ストーンズ</span><span class="name">スティル・ライフ(ウェンブリー・スタジアム 1982)</span><span class="badges"><span class="badge badge--quiet">1店</span></span></span></a></li><li><a class="item" href="https://crolivebose.github.io/links/products/ザローリングストーンズ-ストリップト-4988031894644.html"><img class="thumb" src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/4644/4988031894644.jpg?_ex=600x600" alt="" loading="lazy"><span class="body"><span class="artist">ザ・ローリング・ストーンズ</span><span class="name">ストリップト</span><span class="badges"><span class="badge badge--quiet">1店</span></span></span></a></li></ul>
 <footer><p>※Amazonのアソシエイトとして、適格販売により収入を得ています。</p></footer>
 </main>
 </body>
