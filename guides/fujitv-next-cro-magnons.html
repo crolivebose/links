@@ -137,6 +137,15 @@ border:1px solid var(--line)}
 .badge{justify-self:start;font-size:11.5px;font-weight:700;border-radius:999px;padding:1px 10px}
 .badge--net{background:#e6f2e9;color:#24613a}
 .badge--tv{background:#f1ece6;color:#6a5d54}
+.flow{list-style:none;margin:0 -18px;padding:4px 18px 12px;display:grid;grid-auto-flow:column;
+grid-auto-columns:min(72%,240px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch}
+.flow li{scroll-snap-align:start;display:grid;gap:8px;align-content:start}
+.flow img{width:100%;height:auto;max-height:420px;object-fit:cover;object-position:top;
+border-radius:10px;border:1px solid var(--line);background:#fff}
+.flow p{margin:0;font-size:13px;line-height:1.7}
+.flow b{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin-right:6px;
+border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:12px;font-family:var(--mono)}
 .notes{margin:0;padding-left:1.2em;display:grid;gap:6px;font-size:13px;color:var(--muted);line-height:1.75}
 </style>
 </head>
@@ -147,7 +156,7 @@ border:1px solid var(--line)}
 <p class="eyebrow">フジテレビNEXT ライブ・プレミアム</p>
 <h1>「FACTORY ARCHIVES」ザ・クロマニヨンズの回をスマホで観る</h1>
 </header>
-<p class="lead">1998年から2016年まで放送されたライブ番組「FACTORY」。その名演をアーティストごとに再放送する「FACTORY ARCHIVES」で、ザ・クロマニヨンズの回が放送されます。スカパー!に加入すれば、アンテナがなくてもスマホやPCで見られます。</p>
+<p class="lead">1998年から2016年まで放送されたライブ番組「FACTORY」。その名演をアーティストごとに再放送する「FACTORY ARCHIVES」で、ザ・クロマニヨンズの回が放送されます。スカパー!に加入すれば、スマホやPCでも見られます。</p>
 <div class="onair">
 <span class="label">放送予定</span>
 <span class="when">11月20日 21:00〜23:20</span>
@@ -157,17 +166,35 @@ border:1px solid var(--line)}
 <section class="section">
 <h2>見るために必要なこと</h2>
 <p>フジテレビNEXT ライブ・プレミアムは有料チャンネルです。スカパー!に加入してこのチャンネルを契約すると、契約者向けの「スカパー!番組配信」で、スマホ・タブレット・PCから見られます（1アカウント3台まで）。</p>
+<p>契約には、テレビかレコーダーの<b>B-CASカード/ACAS番号</b>が必要です。スカパー!番組配信だけで見る場合も同じです。番号はテレビ・レコーダーの設定画面や、差し込んであるカードで確認できます。</p>
 </section>
 <section class="section">
 <h2>申し込みの流れ</h2>
 <ol class="steps">
 <li><div><b>スカパー!に申し込む</b><span>下のボタンからスカパー!の申し込みページへ進みます。</span></div></li>
 <li><div><b>「フジテレビNEXT ライブ・プレミアム」を選ぶ</b><span>契約するチャンネルとして選びます。1チャンネルから契約できます。</span></div></li>
+<li><div><b>ID登録・B-CAS/ACAS番号・支払い方法を入力して申し込む</b><span>スカパー!メンバーズIDを登録し、テレビ・レコーダーの番号と支払い方法を入力します。</span></div></li>
 <li><div><b>スカパー!番組配信にログインする</b><span>スマホ・PCで、契約したアカウントでログインします。</span></div></li>
 <li><div><b>放送日に見る</b><span>番組表で放送日時を確かめて、当日に視聴します。</span></div></li>
 </ol>
 <a class="cta" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3758624&amp;pid=892718140" target="_blank" rel="sponsored noopener">スカパー!に申し込む</a>
 <p class="cta-note">スカパー!の公式サイトへ移動します</p>
+</section>
+<section class="section">
+<h2>画面で見る申し込みの流れ</h2>
+<p>実際の申し込み画面です（2026年10月時点。横にスクロールできます）。</p>
+<ol class="flow">
+<li><img src="img/fujitv-next/step01.jpg" alt="申し込み画面 1" loading="lazy" width="560"><p><b>1</b>申し込みボタンから進んだページの下で、「下記の取り扱いに同意しました。」にチェックを入れ、「手続きページへ進む」を押します。</p></li>
+<li><img src="img/fujitv-next/step02.jpg" alt="申し込み画面 2" loading="lazy" width="560"><p><b>2</b>「お申込みフォームへ進む」を押します。</p></li>
+<li><img src="img/fujitv-next/step03.jpg" alt="申し込み画面 3" loading="lazy" width="560"><p><b>3</b>「フジテレビNEXT ライブ・プレミアム」（2,580円/月）の「選択」にチェックを入れ、「次のステップへ進む」。見つからないときは、検索欄に「フジテレビNEXT」と入れます。</p></li>
+<li><img src="img/fujitv-next/step04.jpg" alt="申し込み画面 4" loading="lazy" width="560"><p><b>4</b>選んだチャンネルを確認します。</p></li>
+<li><img src="img/fujitv-next/step05.jpg" alt="申し込み画面 5" loading="lazy" width="560"><p><b>5</b>スカパー!メンバーズIDがなければ「新規登録して加入申込みに進む」。持っている人はログインして進みます。</p></li>
+<li><img src="img/fujitv-next/step06.jpg" alt="申し込み画面 6" loading="lazy" width="560"><p><b>6</b>テレビ・レコーダーのB-CASカード/ACAS番号を入力します。以前に契約したことがあれば「再加入」を選べます。</p></li>
+<li><img src="img/fujitv-next/step07.jpg" alt="申し込み画面 7" loading="lazy" width="560"><p><b>7</b>お支払い方法を選びます（ステップ2/4）。</p></li>
+<li><img src="img/fujitv-next/step08.jpg" alt="申し込み画面 8" loading="lazy" width="560"><p><b>8</b>申し込み内容を確認します（ステップ4/4）。この画面ではまだ申し込みは完了していません。</p></li>
+<li><img src="img/fujitv-next/step09.jpg" alt="申し込み画面 9" loading="lazy" width="560"><p><b>9</b>規約などに同意するチェックを入れ、「申し込む」を押して完了です。</p></li>
+<li><img src="img/fujitv-next/step10.jpg" alt="申し込み画面 10" loading="lazy" width="560"><p><b>10</b>テレビで見る場合は、契約したチャンネルをテレビに映して30分ほど待ちます。スマホ・PCで見る場合は、スカパー!番組配信にログインします。</p></li>
+</ol>
 </section>
 <section class="section">
 <h2>料金（税込）</h2>
@@ -224,6 +251,7 @@ border:1px solid var(--line)}
 <p><a href="https://www.skyperfectv.co.jp/service/ott-guide/" target="_blank" rel="noopener">スカパー!番組配信 ご利用ガイド</a></p>
 <p><a href="https://www.skyperfectv.co.jp/plan/" target="_blank" rel="noopener">スカパー! 料金・商品</a></p>
 <p><a href="https://faq.skyperfectv.co.jp/" target="_blank" rel="noopener">スカパー! ヘルプセンター（解約）</a></p>
+<p><a href="https://faq.skyperfectv.co.jp/faq/show/4986?category_id=2&amp;site_domain=skyperfectv" target="_blank" rel="noopener">スカパー! ヘルプセンター（テレビがなくてもスカパー！を契約できますか）</a></p>
 </footer>
 </main>
 </body>
