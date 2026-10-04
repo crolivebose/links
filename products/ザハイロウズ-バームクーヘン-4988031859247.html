@@ -96,6 +96,31 @@ footer a{color:var(--muted)}
 footer p{margin:0}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "ザハイロウズ-バームクーヘン-4988031859247", "sku": "4988031859247", "gtin13": "4988031859247", "brand": {"@type": "Brand", "name": "ユニバーサルミュージック"}, "releaseDate": "2026-09-30"}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FEEXZMNE8J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',"G-FEEXZMNE8J");(function(){
+  function dest(u){
+    try{
+      var x=new URL(u,location.href),p=x.searchParams;
+      var inner=p.get('vc_url')||p.get('pc')||p.get('murl')||p.get('url');
+      if(inner){try{return new URL(inner).hostname;}catch(e){}}
+      return x.hostname;
+    }catch(e){return '';}
+  }
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a[href]');
+    if(!a||a.hostname===location.hostname)return;
+    var rel=(a.getAttribute('rel')||'');
+    var aff=rel.indexOf('sponsored')>=0;
+    gtag('event',aff?'affiliate_click':'outbound_click',{
+      store:a.dataset.store||dest(a.href).replace(/^www\./,''),
+      placement:a.dataset.place||'',
+      link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,90),
+      link_domain:a.hostname,
+      transport_type:'beacon'
+    });
+  },true);
+})();</script>
+<style>.ga-note{margin:8px 0 0;font-size:11.5px;line-height:1.7;color:var(--muted)}.ga-note a{color:inherit}</style>
 </head>
 <body>
 <main class="page">
@@ -114,6 +139,6 @@ footer p{margin:0}
 <p>「この店で探す」は商品ページを特定できていない店の検索結果です。</p>
 <p>※Amazonのアソシエイトとして、適格販売により収入を得ています。</p>
 </footer>
-</main>
+<p class="ga-note">このサイトは、アクセス解析にGoogle アナリティクスを使っています。Cookieを使い、個人を特定しない形で利用状況を集めています。<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Googleによるデータの使用について</a></p></main>
 </body>
 </html>
