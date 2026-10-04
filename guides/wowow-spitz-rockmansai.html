@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>スピッツ「ロク漫祭」をスマホで観る方法｜WOWOW 12月独占放送・配信</title>
+<meta name="description" content="スピッツ主催「ロク漫祭」（Teenage Fanclub・羊文学・Ride出演）をWOWOWで見る方法。料金、いつ加入するのがお得か、申し込みの手順をまとめました。">
+<meta property="og:title" content="スピッツ「ロク漫祭」をスマホで観る方法｜WOWOW 12月独占放送・配信">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--ground:#0f0d0c;--surface:#1a1513;--line:#332a25;--text:#f4efe8;--muted:#a3948a;
+--accent:#c9813c;--accent-ink:#1a1007;--ok:#7fb069;
+--body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.7;
+-webkit-font-smoothing:antialiased}
+.page{max-width:600px;margin:0 auto;padding:32px 18px 56px;display:grid;gap:26px}
+.pr{justify-self:start;font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 12px}
+.cover{width:100%;max-width:330px;align-self:center;border-radius:10px;display:block;margin:0 auto 6px;
+box-shadow:0 18px 40px rgba(0,0,0,.45);background:var(--surface)}
+header{display:grid;gap:8px}
+.status{justify-self:start;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--accent-ink);background:var(--accent);border-radius:999px;padding:3px 14px}
+.eyebrow{margin:0;font-size:12px;letter-spacing:.26em;color:var(--muted)}
+h1{margin:0;font-size:clamp(28px,8vw,42px);line-height:1.2;font-weight:800;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0;font-family:var(--mono);font-size:12.5px;color:var(--muted);
+font-variant-numeric:tabular-nums}
+.meta b{color:var(--text);font-weight:500}
+.spec{display:grid;gap:4px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.spec .row{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.spec .row span:first-child{color:var(--muted)}
+h2{margin:0;font-size:12px;letter-spacing:.2em;color:var(--muted);display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.common{display:grid;gap:3px;padding:13px 16px;border-radius:11px;background:var(--surface);
+border:1px solid var(--line)}
+.common .label{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent)}
+.stores{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.stores a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:11px;
+text-decoration:none;font-weight:700;background:var(--surface);border:1px solid var(--line);color:var(--text)}
+.stores a{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center}
+.stores .logo{display:flex;align-items:center;justify-content:center;width:86px;height:40px;
+padding:5px 8px;border-radius:9px;flex-shrink:0}
+.stores .logo--light{background:#fff}
+.stores .logo--dark{background:#000;border:1px solid #2c2c2c}
+.stores .logo img{max-width:100%;max-height:100%;object-fit:contain}
+.stores .store{display:grid;gap:2px;min-width:0}
+.stores .name{font-weight:700}
+.stores .bonus{font-size:12px;font-weight:400;color:var(--muted);line-height:1.5}
+.stores .price{font-family:var(--mono);font-size:15px;font-weight:500;color:var(--text)}
+.stores a.buy{border-color:var(--accent);color:var(--accent)}
+.stores a.sold,.stores--multi .buys a.sold{border-color:var(--line);color:var(--muted);opacity:.75}
+.stores a.sold:hover,.stores--multi .buys a.sold:hover{background:var(--surface-2,var(--surface));
+border-color:var(--line);color:var(--muted)}
+.stores a:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.stores a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tag{font-size:12px;font-weight:500;color:var(--muted)}
+.stores a.buy .tag{color:var(--accent)}
+.lead{margin:0;font-size:13px;color:var(--muted)}
+.stores--multi .shop{display:grid;grid-template-columns:auto minmax(0,1fr);gap:9px 14px;align-items:center;
+padding:14px 16px;border-radius:11px;background:var(--surface);border:1px solid var(--line)}
+.stores--multi .shop .store{display:grid;gap:2px;min-width:0}
+.stores--multi .buys{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.stores--multi .buys a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;
+padding:9px 12px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;
+border:1px solid var(--line);color:var(--muted);background:transparent}
+.stores--multi .buys a.buy{border-color:var(--accent);color:var(--accent)}
+.stores--multi .buys a:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.stores--multi .buys a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.stores--multi .buys .price{font-family:var(--mono);font-weight:500;font-size:12.5px;opacity:.9}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.list .day{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--accent);
+margin:14px 0 2px;display:flex;align-items:center;gap:10px}
+.list .day::after{content:"";flex:1;height:1px;background:var(--line)}
+.item{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;align-items:center;
+padding:11px 13px;border-radius:11px;background:var(--surface);border:1px solid var(--line);
+text-decoration:none;color:var(--text)}
+.item:hover{border-color:var(--accent)}
+.item:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.thumb{width:72px;height:72px;object-fit:cover;border-radius:11px;background:var(--ground);display:block}
+.thumb--none{background:var(--ground)}
+.item .body{display:grid;gap:3px;min-width:0}
+.item .artist{font-size:12px;color:var(--muted)}
+.item .name{font-weight:700;font-size:16px;line-height:1.35}
+.badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+.badge{font-size:12px;font-weight:500;color:var(--muted);border:1px solid var(--line);
+border-radius:999px;padding:1px 9px;white-space:nowrap}
+.badge--now{color:var(--accent-ink);background:var(--accent);border-color:var(--accent);font-weight:700}
+.badge--quiet{border-style:dashed}
+.badge--sold{color:#e0a3a3;border-color:#5b3a3a}
+footer{display:grid;gap:6px;font-size:12px;color:var(--muted)}
+footer a{color:var(--muted)}
+footer p{margin:0}
+
+:root{--ground:#faf7f2;--surface:#ffffff;--line:#e7ddd1;--text:#221c18;--muted:#6a5d54;
+--accent:#b0581a;--accent-ink:#ffffff;color-scheme:light}
+.onair,.steps li{box-shadow:0 1px 2px rgba(60,40,20,.06)}
+.cta{box-shadow:0 4px 14px rgba(176,88,26,.25)}
+.lead{margin:0;color:var(--muted);font-size:14.5px;line-height:1.8}
+.onair{display:grid;gap:6px;padding:16px 18px;border-radius:12px;background:var(--surface);
+border:1px solid var(--accent)}
+.onair .label{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent)}
+.onair .when{font-family:var(--mono);font-size:22px;font-weight:500}
+.onair .what{font-weight:700}
+.onair .note{font-size:12.5px;color:var(--muted);line-height:1.7}
+.section{display:grid;gap:10px}
+.section p{margin:0;line-height:1.85}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:step}
+.steps li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start;
+padding:14px 16px;border-radius:11px;background:var(--surface);border:1px solid var(--line)}
+.steps li::before{counter-increment:step;content:counter(step);display:flex;align-items:center;
+justify-content:center;width:34px;height:34px;border-radius:999px;background:var(--accent);
+color:var(--accent-ink);font-weight:800;font-family:var(--mono)}
+.steps b{display:block;margin-bottom:2px}
+.steps span{color:var(--muted);font-size:13.5px;line-height:1.75}
+.price{width:100%;border-collapse:collapse;font-size:14px}
+.price td{padding:9px 4px;border-bottom:1px solid var(--line)}
+.price td:last-child{text-align:right;font-family:var(--mono);white-space:nowrap}
+.price tr.total td{font-weight:800;border-bottom:0}
+.cta{display:flex;align-items:center;justify-content:center;min-height:52px;padding:12px 18px;
+border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:16px;
+text-decoration:none;text-align:center}
+.cta:hover{filter:brightness(1.08)}
+.cta:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+.cta-note{margin:0;font-size:12px;color:var(--muted);text-align:center}
+.tip{margin:0;padding:12px 14px;border-radius:10px;background:#fff4e8;border:1px solid #f0d3b4;
+font-size:13.5px;line-height:1.8}
+.lineup h3{margin:6px 0 0;font-size:14px}
+.programs{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.programs li{display:grid;gap:3px;padding:12px 14px;border-radius:10px;background:var(--surface);
+border:1px solid var(--line)}
+.programs .when{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.programs a{color:var(--text);font-weight:700;text-decoration:none}
+.programs a:hover{text-decoration:underline}
+.programs .desc{font-size:13px;color:var(--muted);line-height:1.7}
+.badge{justify-self:start;font-size:11.5px;font-weight:700;border-radius:999px;padding:1px 10px}
+.badge--net{background:#e6f2e9;color:#24613a}
+.badge--tv{background:#f1ece6;color:#6a5d54}
+.flow{list-style:none;margin:0 -18px;padding:4px 18px 12px;display:grid;grid-auto-flow:column;
+grid-auto-columns:min(72%,240px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch}
+.flow li{scroll-snap-align:start;display:grid;gap:8px;align-content:start}
+.flow img{width:100%;height:auto;max-height:420px;object-fit:cover;object-position:top;
+border-radius:10px;border:1px solid var(--line);background:#fff}
+.flow p{margin:0;font-size:13px;line-height:1.7}
+.flow b{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin-right:6px;
+border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:12px;font-family:var(--mono)}
+.notes{margin:0;padding-left:1.2em;display:grid;gap:6px;font-size:13px;color:var(--muted);line-height:1.75}
+
+.performers{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.performers li{padding:6px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);
+font-weight:700;font-size:14px}
+.related{font-size:13.5px}
+.related a{color:var(--accent);font-weight:700}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FEEXZMNE8J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',"G-FEEXZMNE8J");(function(){
+  function dest(u){
+    try{
+      var x=new URL(u,location.href),p=x.searchParams;
+      var inner=p.get('vc_url')||p.get('pc')||p.get('murl')||p.get('url');
+      if(inner){try{return new URL(inner).hostname;}catch(e){}}
+      return x.hostname;
+    }catch(e){return '';}
+  }
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a[href]');
+    if(!a||a.hostname===location.hostname)return;
+    var rel=(a.getAttribute('rel')||'');
+    var aff=rel.indexOf('sponsored')>=0;
+    gtag('event',aff?'affiliate_click':'outbound_click',{
+      store:a.dataset.store||dest(a.href).replace(/^www\./,''),
+      placement:a.dataset.place||'',
+      link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,90),
+      link_domain:a.hostname,
+      transport_type:'beacon'
+    });
+  },true);
+})();</script>
+<style>.ga-note{margin:8px 0 0;font-size:11.5px;line-height:1.7;color:var(--muted)}.ga-note a{color:inherit}</style>
+</head>
+<body>
+<main class="page">
+<span class="pr">PR・このページはアフィリエイトリンクを含みます</span>
+<header>
+<p class="eyebrow">WOWOW 独占放送・配信</p>
+<h1>スピッツ主催「ロク漫祭」をスマホで観る</h1>
+</header>
+<p class="lead">草野マサムネのラジオ番組から生まれた、スピッツ初の海外アーティストを招いたライブイベント「ロク漫祭 ～SPITZ 草野マサムネのロック大陸漫遊祭り～」。その模様がWOWOWで独占放送・配信されます。WOWOWに加入すれば、テレビがなくてもスマホやPCで見られます。</p>
+<div class="onair">
+<span class="label">放送・配信予定</span>
+<span class="when">2026年12月</span>
+<span class="what">ロク漫祭 ～SPITZ 草野マサムネのロック大陸漫遊祭り～</span>
+<span class="note">2026年9月22日、東京・有明アリーナ公演。放送・配信の日時は発表されしだい追記します。放送・配信の終了後、約1か月のアーカイブ配信もあります。</span>
+</div>
+<section class="section">
+<h2>出演</h2>
+<ul class="performers"><li>スピッツ</li><li>Teenage Fanclub</li><li>羊文学</li><li>Ride</li></ul>
+<p>グラスゴーのギター・ポップバンド Teenage Fanclub、90年代UKシューゲイザーを代表する Ride、日本のオルタナティブロックバンド 羊文学。展覧会「SPITZ,NOW! ～ロック大陸の物語展～」で集めた「スピッツとコラボしてほしいバンドは？」というファンの声をもとに招かれた顔ぶれです。</p>
+</section>
+<section class="section">
+<h2>見るために必要なこと</h2>
+<p>WOWOWに加入すると、BSのテレビ放送と、ネット配信の「WOWOWオンデマンド」の両方が見られます。スマホ・PCのWOWOWオンデマンドで見るだけなら、テレビやB-CASカードは要りません（B-CAS/ACAS番号は、BSのテレビ放送で見るときだけ登録します）。</p>
+</section>
+<section class="section">
+<h2>申し込みの流れ</h2>
+<ol class="steps">
+<li><div><b>WOWOWに申し込む</b><span>下のボタンからWOWOWの申し込みページへ進みます。</span></div></li>
+<li><div><b>メールアドレスを登録し、プランを選ぶ</b><span>1台で見るならスタンダードプランで十分です。</span></div></li>
+<li><div><b>支払い方法を入力して申し込む</b><span>テレビでも見たい場合は、ここでB-CAS/ACAS番号も登録します。</span></div></li>
+<li><div><b>WOWOWオンデマンドで見る</b><span>スマホ・タブレットはアプリ、PCはブラウザから、登録したアカウントでログインします。</span></div></li>
+</ol>
+<a class="cta" href="https://t.afi-b.com/visit.php?a=E14702c-n481057e&amp;p=n944202Q" target="_blank" rel="sponsored noopener" data-store="wowow" data-place="steps">WOWOWに申し込む</a>
+<img src="https://t.afi-b.com/lead/E14702c/n944202Q/n481057e" width="1" height="1" alt="" style="border:none;position:absolute">
+<p class="cta-note">WOWOWの公式サイトへ移動します</p>
+</section>
+<section class="section">
+<h2>料金（税込）</h2>
+<table class="price">
+<tr><td>スタンダードプラン（テレビ1台・配信1台）</td><td>2,530円/月</td></tr>
+<tr><td>トリプルプラン（テレビ3台・配信3台）</td><td>3,960円/月</td></tr>
+</table>
+<p>料金は<b>加入した日</b>に1か月分がかかり、以後は毎月同じ日に請求されます。日割りはありません。</p>
+<p>解約はいつでも申し込めて、違約金もありません。解約を申し込んでも、直近の請求日から1か月間は見られます。</p>
+<p class="tip"><b>放送・配信の日に合わせて加入するのがお得です。</b>加入した日から1か月は見られるので、加入してすぐ解約を申し込んでも、支払いは2,530円だけで済みます。</p>
+<a class="cta" href="https://t.afi-b.com/visit.php?a=E14702c-n481057e&amp;p=n944202Q" target="_blank" rel="sponsored noopener" data-store="wowow" data-place="price">WOWOWに申し込む</a>
+</section>
+<section class="section related">
+<h2>あわせて</h2>
+<p>スピッツの新作『kettle』の購入リンクは<a href="../products/スピッツ-kettle通常盤-4988031924013.html">こちら</a>。</p>
+</section>
+<section class="section">
+<h2>ご注意</h2>
+<ul class="notes">
+<li>放送・配信の日時は未発表です（2026年10月4日時点）。WOWOWの番組ページでご確認ください。</li>
+<li>料金・条件は2026年10月4日時点のWOWOW公式情報です。App Store経由で加入した場合など、料金が異なる場合があります。</li>
+<li>WOWOWと直接契約する場合の説明です。ケーブルテレビ・スカパー!などを通じた契約は条件が異なります。</li>
+</ul>
+</section>
+<footer>
+<p>情報の出典：</p>
+<p><a href="https://www.wowow.co.jp/music/rockmansai/" target="_blank" rel="noopener">WOWOW 番組ページ「ロク漫祭 ～SPITZ 草野マサムネのロック大陸漫遊祭り～」</a></p>
+<p><a href="https://spitz-web.com/news/8160/" target="_blank" rel="noopener">スピッツ公式「ロク漫祭 WOWOWでの放送・配信決定！」</a></p>
+<p><a href="https://support.wowow.co.jp/answer/61bffb829e474a001c1cd7ff/" target="_blank" rel="noopener">WOWOW ヘルプセンター（料金・請求サイクル・請求日）</a></p>
+<p><a href="https://support.wowow.co.jp/answer/6590b85e4b213c6a03b27e08/" target="_blank" rel="noopener">WOWOW ヘルプセンター（解約後、いつまで視聴できる？）</a></p>
+<p><a href="https://support.wowow.co.jp/answer/64703ec2824840db044f89c3/" target="_blank" rel="noopener">WOWOW ヘルプセンター（WOWOWに加入したい）</a></p>
+</footer>
+<p class="ga-note">このサイトは、アクセス解析にGoogle アナリティクスを使っています。Cookieを使い、個人を特定しない形で利用状況を集めています。<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Googleによるデータの使用について</a></p></main>
+</body>
+</html>
