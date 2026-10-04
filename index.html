@@ -1,95 +1,258 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BURNING MOTORS GO LAST HEAVEN</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #444;
-      color: #FFEB3B;
-      font-family: 'Helvetica Neue', sans-serif;
-      text-align: center;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>リンク集｜購入リンク・視聴ガイド</title>
+<meta name="description" content="CD・レコードの購入リンクと、動画配信の視聴ガイドのリンク集。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--ground:#0f0d0c;--surface:#1a1513;--line:#332a25;--text:#f4efe8;--muted:#a3948a;
+--accent:#c9813c;--accent-ink:#1a1007;--ok:#7fb069;
+--body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.7;
+-webkit-font-smoothing:antialiased}
+.page{max-width:600px;margin:0 auto;padding:32px 18px 56px;display:grid;gap:26px}
+.pr{justify-self:start;font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 12px}
+.cover{width:100%;max-width:330px;align-self:center;border-radius:10px;display:block;margin:0 auto 6px;
+box-shadow:0 18px 40px rgba(0,0,0,.45);background:var(--surface)}
+header{display:grid;gap:8px}
+.status{justify-self:start;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--accent-ink);background:var(--accent);border-radius:999px;padding:3px 14px}
+.eyebrow{margin:0;font-size:12px;letter-spacing:.26em;color:var(--muted)}
+h1{margin:0;font-size:clamp(28px,8vw,42px);line-height:1.2;font-weight:800;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0;font-family:var(--mono);font-size:12.5px;color:var(--muted);
+font-variant-numeric:tabular-nums}
+.meta b{color:var(--text);font-weight:500}
+.spec{display:grid;gap:4px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.spec .row{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.spec .row span:first-child{color:var(--muted)}
+h2{margin:0;font-size:12px;letter-spacing:.2em;color:var(--muted);display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.common{display:grid;gap:3px;padding:13px 16px;border-radius:11px;background:var(--surface);
+border:1px solid var(--line)}
+.common .label{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent)}
+.stores{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.stores a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:11px;
+text-decoration:none;font-weight:700;background:var(--surface);border:1px solid var(--line);color:var(--text)}
+.stores a{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center}
+.stores .logo{display:flex;align-items:center;justify-content:center;width:86px;height:40px;
+padding:5px 8px;border-radius:9px;flex-shrink:0}
+.stores .logo--light{background:#fff}
+.stores .logo--dark{background:#000;border:1px solid #2c2c2c}
+.stores .logo img{max-width:100%;max-height:100%;object-fit:contain}
+.stores .store{display:grid;gap:2px;min-width:0}
+.stores .name{font-weight:700}
+.stores .bonus{font-size:12px;font-weight:400;color:var(--muted);line-height:1.5}
+.stores .price{font-family:var(--mono);font-size:15px;font-weight:500;color:var(--text)}
+.stores a.buy{border-color:var(--accent);color:var(--accent)}
+.stores a.sold,.stores--multi .buys a.sold{border-color:var(--line);color:var(--muted);opacity:.75}
+.stores a.sold:hover,.stores--multi .buys a.sold:hover{background:var(--surface-2,var(--surface));
+border-color:var(--line);color:var(--muted)}
+.stores a:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.stores a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tag{font-size:12px;font-weight:500;color:var(--muted)}
+.stores a.buy .tag{color:var(--accent)}
+.lead{margin:0;font-size:13px;color:var(--muted)}
+.stores--multi .shop{display:grid;grid-template-columns:auto minmax(0,1fr);gap:9px 14px;align-items:center;
+padding:14px 16px;border-radius:11px;background:var(--surface);border:1px solid var(--line)}
+.stores--multi .shop .store{display:grid;gap:2px;min-width:0}
+.stores--multi .buys{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.stores--multi .buys a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;
+padding:9px 12px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;
+border:1px solid var(--line);color:var(--muted);background:transparent}
+.stores--multi .buys a.buy{border-color:var(--accent);color:var(--accent)}
+.stores--multi .buys a:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.stores--multi .buys a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.stores--multi .buys .price{font-family:var(--mono);font-weight:500;font-size:12.5px;opacity:.9}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.list .day{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--accent);
+margin:14px 0 2px;display:flex;align-items:center;gap:10px}
+.list .day::after{content:"";flex:1;height:1px;background:var(--line)}
+.item{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;align-items:center;
+padding:11px 13px;border-radius:11px;background:var(--surface);border:1px solid var(--line);
+text-decoration:none;color:var(--text)}
+.item:hover{border-color:var(--accent)}
+.item:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.thumb{width:72px;height:72px;object-fit:cover;border-radius:11px;background:var(--ground);display:block}
+.thumb--none{background:var(--ground)}
+.item .body{display:grid;gap:3px;min-width:0}
+.item .artist{font-size:12px;color:var(--muted)}
+.item .name{font-weight:700;font-size:16px;line-height:1.35}
+.badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+.badge{font-size:12px;font-weight:500;color:var(--muted);border:1px solid var(--line);
+border-radius:999px;padding:1px 9px;white-space:nowrap}
+.badge--now{color:var(--accent-ink);background:var(--accent);border-color:var(--accent);font-weight:700}
+.badge--quiet{border-style:dashed}
+.badge--sold{color:#e0a3a3;border-color:#5b3a3a}
+footer{display:grid;gap:6px;font-size:12px;color:var(--muted)}
+footer a{color:var(--muted)}
+footer p{margin:0}
 
-    .container {
-      padding: 20px;
-      max-width: 500px;
-      margin: auto;
-    }
+:root{--ground:#faf7f2;--surface:#ffffff;--line:#e7ddd1;--text:#221c18;--muted:#6a5d54;
+--accent:#b0581a;--accent-ink:#ffffff;color-scheme:light}
+.onair,.steps li{box-shadow:0 1px 2px rgba(60,40,20,.06)}
+.cta{box-shadow:0 4px 14px rgba(176,88,26,.25)}
+.lead{margin:0;color:var(--muted);font-size:14.5px;line-height:1.8}
+.onair{display:grid;gap:6px;padding:16px 18px;border-radius:12px;background:var(--surface);
+border:1px solid var(--accent)}
+.onair .label{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--accent)}
+.onair .when{font-family:var(--mono);font-size:22px;font-weight:500}
+.onair .what{font-weight:700}
+.onair .note{font-size:12.5px;color:var(--muted);line-height:1.7}
+.section{display:grid;gap:10px}
+.section p{margin:0;line-height:1.85}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:step}
+.steps li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:start;
+padding:14px 16px;border-radius:11px;background:var(--surface);border:1px solid var(--line)}
+.steps li::before{counter-increment:step;content:counter(step);display:flex;align-items:center;
+justify-content:center;width:34px;height:34px;border-radius:999px;background:var(--accent);
+color:var(--accent-ink);font-weight:800;font-family:var(--mono)}
+.steps b{display:block;margin-bottom:2px}
+.steps span{color:var(--muted);font-size:13.5px;line-height:1.75}
+.price{width:100%;border-collapse:collapse;font-size:14px}
+.price td{padding:9px 4px;border-bottom:1px solid var(--line)}
+.price td:last-child{text-align:right;font-family:var(--mono);white-space:nowrap}
+.price tr.total td{font-weight:800;border-bottom:0}
+.cta{display:flex;align-items:center;justify-content:center;min-height:52px;padding:12px 18px;
+border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:16px;
+text-decoration:none;text-align:center}
+.cta:hover{filter:brightness(1.08)}
+.cta:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+.cta-note{margin:0;font-size:12px;color:var(--muted);text-align:center}
+.tip{margin:0;padding:12px 14px;border-radius:10px;background:#fff4e8;border:1px solid #f0d3b4;
+font-size:13.5px;line-height:1.8}
+.lineup h3{margin:6px 0 0;font-size:14px}
+.programs{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.programs li{display:grid;gap:3px;padding:12px 14px;border-radius:10px;background:var(--surface);
+border:1px solid var(--line)}
+.programs .when{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.programs a{color:var(--text);font-weight:700;text-decoration:none}
+.programs a:hover{text-decoration:underline}
+.programs .desc{font-size:13px;color:var(--muted);line-height:1.7}
+.badge{justify-self:start;font-size:11.5px;font-weight:700;border-radius:999px;padding:1px 10px}
+.badge--net{background:#e6f2e9;color:#24613a}
+.badge--tv{background:#f1ece6;color:#6a5d54}
+.flow{list-style:none;margin:0 -18px;padding:4px 18px 12px;display:grid;grid-auto-flow:column;
+grid-auto-columns:min(72%,240px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch}
+.flow li{scroll-snap-align:start;display:grid;gap:8px;align-content:start}
+.flow img{width:100%;height:auto;max-height:420px;object-fit:cover;object-position:top;
+border-radius:10px;border:1px solid var(--line);background:#fff}
+.flow p{margin:0;font-size:13px;line-height:1.7}
+.flow b{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin-right:6px;
+border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:12px;font-family:var(--mono)}
+.notes{margin:0;padding-left:1.2em;display:grid;gap:6px;font-size:13px;color:var(--muted);line-height:1.75}
 
-    .cover {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .release {
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-
-    .store {
-      background: #222;
-      border-radius: 10px;
-      margin: 10px 0;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .store img {
-      max-height: 30px;
-    }
-
-    .store a {
-      background: #334;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-  </style>
+.hub{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.hub li a{display:grid;gap:2px;padding:12px 14px;border-radius:10px;background:var(--surface);
+border:1px solid var(--line);color:var(--text);text-decoration:none}
+.hub li a:hover{border-color:var(--accent)}
+.hub .sub{font-size:12px;color:var(--muted)}
+.hub .ttl{font-weight:700;line-height:1.5}
+.count{font-size:12px;color:var(--muted);font-weight:400;margin-left:6px}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FEEXZMNE8J"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',"G-FEEXZMNE8J");(function(){
+  function dest(u){
+    try{
+      var x=new URL(u,location.href),p=x.searchParams;
+      var inner=p.get('vc_url')||p.get('pc')||p.get('murl')||p.get('url');
+      if(inner){try{return new URL(inner).hostname;}catch(e){}}
+      return x.hostname;
+    }catch(e){return '';}
+  }
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a[href]');
+    if(!a||a.hostname===location.hostname)return;
+    var rel=(a.getAttribute('rel')||'');
+    var aff=rel.indexOf('sponsored')>=0;
+    gtag('event',aff?'affiliate_click':'outbound_click',{
+      store:a.dataset.store||dest(a.href).replace(/^www\./,''),
+      placement:a.dataset.place||'',
+      link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,90),
+      link_domain:a.hostname,
+      transport_type:'beacon'
+    });
+  },true);
+})();</script>
+<style>.ga-note{margin:8px 0 0;font-size:11.5px;line-height:1.7;color:var(--muted)}.ga-note a{color:inherit}</style>
 </head>
 <body>
-  <div class="container">
-    <img src="cover.jpg" alt="BURNING MOTORS GO LAST HEAVEN ジャケット" class="cover">
-
-    <h1>BURNING MOTORS GO LAST HEAVEN</h1>
-    <p class="release">初Blu-ray化 / 2025年10月11日(土) RELEASE</p>
-
-    <div class="store">
-      <img src="universal.svg" alt="Universal Music Store">
-      <a href="https://store.universal-music.co.jp/products/umxk9044" target="_blank" rel="noopener noreferrer">ここに行く</a>
-    </div>
-
-    <div class="store">
-      <img src="amazonbluray_ondark.svg" alt="Amazon Blu-ray">5,255円（23%）OFF!
-      <a href="https://amzn.to/4k1ECX0" target="_blank" rel="noopener noreferrer">ここに行く</a>
-    </div>
-
-    <div class="store">
-      <img src="towerrecords_ondark.svg" alt="Tower Records Online">
-      <a href="https://tower.jp/item/6871675" target="_blank" rel="noopener noreferrer">ここに行く</a>
-    </div>
-
-    <div class="store">
-      <img src="rakutenbooksjapan_ondark.svg" alt="Rakuten Books">4,158円（18％）OFF！
-      <a href="https://a.r10.to/hka6tt" target="_blank" >ここに行く</a>
-    </div>
-
-    <div class="store">
-      <img src="diskunion_ondark.svg" alt="disk union">
-      <a href="https://diskunion.net/portal/ct/detail/1009055767" target="_blank" rel="noopener noreferrer">ここに行く</a>
-    </div>
-  </div>
+<main class="page">
+<span class="pr">PR・このサイトはアフィリエイトリンクを含みます</span>
+<header>
+<p class="eyebrow">LINKS</p>
+<h1>リンク集</h1>
+</header>
+<p class="lead">CD・レコードの購入リンクと、動画配信サービスの視聴ガイドをまとめています（45ページ）。</p>
+<section class="section">
+<h2>視聴ガイド・おすすめ一覧<span class="count">4</span></h2>
+<ul class="hub">
+<li><a href="guides/disneyplus-rock-music.html"><span class="sub">Disney+（ディズニープラス）</span><span class="ttl">ディズニープラスで観るロック映画・音楽ドキュメンタリー おすすめ一覧</span></a></li>
+<li><a href="guides/fujitv-next-cro-magnons.html"><span class="sub">フジテレビNEXT ライブ・プレミアム</span><span class="ttl">ザ・クロマニヨンズのライブ番組をスマホで見る方法</span></a></li>
+<li><a href="guides/unext-rock-music.html"><span class="sub">U-NEXT（ユーネクスト）</span><span class="ttl">U-NEXTで観るロック映画・音楽ドキュメンタリー おすすめ一覧</span></a></li>
+<li><a href="guides/wowow-spitz-rockmansai.html"><span class="sub">WOWOW 独占放送・配信</span><span class="ttl">スピッツ「ロク漫祭」をスマホで観る方法</span></a></li>
+</ul>
+</section>
+<section class="section">
+<h2>まとめ<span class="count">4</span></h2>
+<ul class="hub">
+<li><a href="roundups/anniversary-30th.html"><span class="sub">1作品</span><span class="ttl">今月の周年記念盤</span></a></li>
+<li><a href="roundups/high-lows-analog-2026.html"><span class="sub">10作品</span><span class="ttl">ザ・ハイロウズ アナログ復刻10タイトル</span></a></li>
+<li><a href="roundups/new-releases-this-week.html"><span class="sub">12作品</span><span class="ttl">今週発売のCD・レコード</span></a></li>
+<li><a href="roundups/reservations-this-week.html"><span class="sub">1作品</span><span class="ttl">今週予約開始のCD・レコード</span></a></li>
+</ul>
+</section>
+<section class="section">
+<h2>商品の購入リンク<span class="count">27</span></h2>
+<ul class="hub">
+<li><a href="products/Manic-Street-Preachers-ホーリーバイブルライヴ-4547366847345.html"><span class="sub">Manic Street Preachers</span><span class="ttl">ホーリー・バイブル・ライヴ</span></a></li>
+<li><a href="products/セックスピストルズ-勝手に来やがれ30周年記念エディション-4988031910542.html"><span class="sub">Sex Pistols</span><span class="ttl">勝手に来やがれ(30周年記念エディション)</span></a></li>
+<li><a href="products/THE-BEATLES-WITH-THE-BEATLES-Sessions-expanded-4589767514556.html"><span class="sub">The Beatles</span><span class="ttl">WITH THE BEATLES Sessions ＜expanded＞</span></a></li>
+<li><a href="products/ザビートルズ-ラバーソウルスペシャルエディション1CD-4988031911723.html"><span class="sub">The Beatles</span><span class="ttl">ラバー・ソウル</span></a></li>
+<li><a href="products/ザフー-ザフーバイナンバーズデラックスエディション-4988031925836.html"><span class="sub">The Who</span><span class="ttl">ザ・フー・バイ・ナンバーズ(デラックス・エディション)</span></a></li>
+<li><a href="products/サニーデイサービス-あじさい完全生産限定アナログ盤-4988034300395.html"><span class="sub">サニーデイ・サービス</span><span class="ttl">あじさい【完全生産限定アナログ盤】</span></a></li>
+<li><a href="products/ザクロマニヨンズ-CAVE-PARTY完全生産限定アナログ盤-4547366830453.html"><span class="sub">ザ・クロマニヨンズ</span><span class="ttl">CAVE PARTY【完全生産限定アナログ盤】</span></a></li>
+<li><a href="products/ザクロマニヨンズ-FIRE-AGE完全生産限定アナログ盤-4547366830460.html"><span class="sub">ザ・クロマニヨンズ</span><span class="ttl">FIRE AGE【完全生産限定アナログ盤】</span></a></li>
+<li><a href="products/ザクロマニヨンズ-MONDO-ROCCIA完全生産限定アナログ盤-4547366830477.html"><span class="sub">ザ・クロマニヨンズ</span><span class="ttl">MONDO ROCCIA【完全生産限定アナログ盤】</span></a></li>
+<li><a href="products/ザクロマニヨンズ-Oi-Um-bobo完全生産限定アナログ盤-4547366830484.html"><span class="sub">ザ・クロマニヨンズ</span><span class="ttl">Oi! Um bobo【完全生産限定アナログ盤】</span></a></li>
+<li><a href="products/ザクロマニヨンズ-ザクロマニヨンズ完全生産限定アナログ盤-4547366829969.html"><span class="sub">ザ・クロマニヨンズ</span><span class="ttl">ザ・クロマニヨンズ【完全生産限定アナログ盤】</span></a></li>
+<li><a href="products/ザクロマニヨンズ-ジョニーエスプレッソ-4547366847123.html"><span class="sub">ザ・クロマニヨンズ</span><span class="ttl">ジョニー・エスプレッソ</span></a></li>
+<li><a href="products/THE-HIGH-LOWS-Do-TheMUSTANG完全生産限定アナログ盤-4547366804232.html"><span class="sub">ザ・ハイロウズ</span><span class="ttl">Do!! The★MUSTANG【完全生産限定アナログ盤】</span></a></li>
+<li><a href="products/ザハイロウズ-HOTEL-TIKI-POTO-4988031859261.html"><span class="sub">ザ・ハイロウズ</span><span class="ttl">HOTEL TIKI-POTO</span></a></li>
+<li><a href="products/ザハイロウズ-Relaxin-WITH-THE-HIGH-LOWS-4988031859209.html"><span class="sub">ザ・ハイロウズ</span><span class="ttl">Relaxin&#x27; WITH THE HIGH-LOWS</span></a></li>
+<li><a href="products/ザハイロウズ-THE-HIGH-LOWS-4988031859216.html"><span class="sub">ザ・ハイロウズ</span><span class="ttl">THE HIGH-LOWS</span></a></li>
+<li><a href="products/ザハイロウズ-Tigermobile-4988031859223.html"><span class="sub">ザ・ハイロウズ</span><span class="ttl">Tigermobile</span></a></li>
+<li><a href="products/ザハイロウズ-angel-beetle-4988031859285.html"><span class="sub">ザ・ハイロウズ</span><span class="ttl">angel beetle</span></a></li>
+<li><a href="products/ザハイロウズ-flip-flop-4988031859254.html"><span class="sub">ザ・ハイロウズ</span><span class="ttl">flip flop</span></a></li>
+<li><a href="products/ザハイロウズ-flip-flop2-4988031859278.html"><span class="sub">ザ・ハイロウズ</span><span class="ttl">flip flop2</span></a></li>
+<li><a href="products/ザハイロウズ-バームクーヘン-4988031859247.html"><span class="sub">ザ・ハイロウズ</span><span class="ttl">バームクーヘン</span></a></li>
+<li><a href="products/ザハイロウズ-ロブスター-4988031859230.html"><span class="sub">ザ・ハイロウズ</span><span class="ttl">ロブスター</span></a></li>
+<li><a href="products/スイッチパブリッシング-SWITCH-Vol44-No10-特集-あいみょん-9784884186890.html"><span class="sub">スイッチ・パブリッシング</span><span class="ttl">SWITCH Vol.44 No.10 特集 あいみょん</span></a></li>
+<li><a href="products/スピッツ-kettle通常盤-4988031924013.html"><span class="sub">スピッツ</span><span class="ttl">kettle</span></a></li>
+<li><a href="products/スピッツ-kettle重量盤アナログ盤-4988031924037.html"><span class="sub">スピッツ</span><span class="ttl">kettle(重量盤)【アナログ盤】</span></a></li>
+<li><a href="products/ユニコーン-あたえてこ-4547366844375.html"><span class="sub">ユニコーン</span><span class="ttl">あたえてこ</span></a></li>
+<li><a href="products/奥田民生-記念ライダー30号29-30-BOX-スペシャル-完全生産限定盤-4LP2Blu-rayアナログ盤-4547366706727.html"><span class="sub">奥田民生</span><span class="ttl">『記念ライダー30号』29-30 BOX スペシャル (完全生産限定盤 4LP＋2Blu-ray)【アナログ盤】</span></a></li>
+</ul>
+</section>
+<section class="section">
+<h2>以前に作ったページ<span class="count">10</span></h2>
+<ul class="hub">
+<li><a href="blue_hearts_cassette_links.html"><span class="ttl">THE BLUE HEARTS カセット Amazon リンク集</span></a></li>
+<li><a href="blue_hearts_cassette_links4.html"><span class="ttl">The Blue Hearts – Cassette + T-Shirt 56 SKU Links</span></a></li>
+<li><a href="burning_motors_go_last_heaven.html"><span class="ttl">BURNING MOTORS GO LAST HEAVEN</span></a></li>
+<li><a href="cro_carburetor.html"><span class="ttl">キャブレターにひとしずく ストアリンク集</span></a></li>
+<li><a href="cro_johnny_espresso.html"><span class="ttl">ジョニー・エスプレッソ 購入リンク</span></a></li>
+<li><a href="cro_new_single.html"><span class="ttl">ジョニー・エスプレッソ ストアリンク集</span></a></li>
+<li><a href="jambo_japan.html"><span class="ttl">ザ・クロマニヨンズ『JAMBO JAPAN』 ストアリンク集</span></a></li>
+<li><a href="jambo_japan_live.html"><span class="ttl">ザ・クロマニヨンズ『ザ・クロマニヨンズ ツアー JAMBO JAPAN 2025-2026』 ストアリンク集</span></a></li>
+<li><a href="pappaparadise.html"><span class="ttl">宇多田ヒカル『パッパパラダイス』 ストアリンク集</span></a></li>
+<li><a href="switch_aimyon.html"><span class="ttl">SWITCH Vol.44 No.10 特集 あいみょん 購入リンク</span></a></li>
+</ul>
+</section>
+<p class="ga-note">このサイトは、アクセス解析にGoogle アナリティクスを使っています。Cookieを使い、個人を特定しない形で利用状況を集めています。<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Googleによるデータの使用について</a></p></main>
 </body>
 </html>
