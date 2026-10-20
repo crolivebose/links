@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hola! Leopardo 購入リンク</title>
+<meta name="description" content="ザ・クロマニヨンズ 19thアルバム『Hola! Leopardo』2027年1月20日発売。CD・12inchアナログ盤のショップ別特典と購入リンクまとめ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --ground: #100c0a;
+  --surface: #1b1411;
+  --surface-2: #241a15;
+  --line: #352520;
+  --text: #f6efe6;
+  --muted: #a89689;
+  --accent: #c9813c;
+  --accent-ink: #1a1007;
+  --gift: #e9c07a;
+  --display: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --body: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(130% 55% at 50% 0%, #2b1a0f 0%, rgba(16,12,10,0) 62%), var(--ground);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 600px; margin: 0 auto; padding: 36px 18px 64px; display: grid; gap: 30px; }
+
+.pr {
+  justify-self: start; font-size: 11px; letter-spacing: .08em; color: var(--muted);
+  border: 1px solid var(--line); border-radius: 999px; padding: 2px 12px;
+}
+header { display: grid; gap: 10px; }
+.eyebrow { margin: 0; font-size: 12px; letter-spacing: .3em; color: var(--muted); }
+h1 {
+  font-family: var(--display); font-weight: 800; margin: 0;
+  font-size: clamp(34px, 10vw, 52px); line-height: 1.18; letter-spacing: .01em;
+  text-wrap: balance;
+}
+.release { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin: 0; }
+.release .day {
+  font-family: var(--mono); font-size: 20px; font-weight: 500; letter-spacing: .02em;
+  font-variant-numeric: tabular-nums; color: var(--accent);
+}
+.release .word { font-size: 13px; color: var(--muted); letter-spacing: .1em; }
+
+.formats { display: grid; gap: 10px; }
+.format {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 6px 12px;
+  padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
+}
+.format .kind { font-weight: 700; font-size: 15px; }
+.format .price {
+  font-family: var(--mono); font-size: 14px; font-variant-numeric: tabular-nums; color: var(--text);
+}
+.format .sub { grid-column: 1 / -1; font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+.format .codes {
+  grid-column: 1 / -1; font-family: var(--mono); font-size: 11.5px; color: var(--muted);
+  display: flex; flex-wrap: wrap; gap: 2px 14px;
+}
+
+.common {
+  display: grid; gap: 4px; padding: 14px 16px; border-radius: 12px;
+  background: var(--surface-2); border: 1px solid var(--line);
+}
+.common .label { font-size: 10.5px; font-weight: 700; letter-spacing: .14em; color: var(--gift); }
+.common .name { font-weight: 700; }
+.common .note { font-size: 12px; color: var(--muted); }
+
+.section-title {
+  display: flex; align-items: center; gap: 12px; margin: 0;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .22em; color: var(--muted);
+}
+.section-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+.shops { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.shop { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 15px; }
+.shop-head { display: flex; align-items: center; gap: 14px; margin-bottom: 13px; }
+.logo {
+  display: flex; align-items: center; justify-content: center;
+  width: 98px; height: 46px; padding: 6px 9px; border-radius: 9px; flex-shrink: 0;
+}
+.logo--light { background: #fff; }
+.logo--dark { background: #000; border: 1px solid #2c2c2c; }
+.logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.gift { display: grid; gap: 1px; min-width: 0; }
+.gift .label { font-size: 10px; font-weight: 700; letter-spacing: .12em; color: var(--gift); }
+.gift .name { font-weight: 700; font-size: 15px; line-height: 1.4; }
+.gift .note { font-size: 11.5px; color: var(--muted); line-height: 1.5; }
+.gift .none { font-weight: 500; font-size: 13.5px; color: var(--muted); }
+
+.buys { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 8px; }
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  min-height: 46px; padding: 8px 10px; border-radius: 10px; text-decoration: none;
+  font-weight: 700; font-size: 14px; white-space: nowrap;
+  border: 1px solid var(--accent); color: var(--accent); background: transparent;
+  transition: background-color .15s ease, color .15s ease, transform .12s ease;
+}
+.btn .amount { font-family: var(--mono); font-weight: 500; font-size: 12.5px; opacity: .85; }
+.btn--primary { background: var(--accent); color: var(--accent-ink); }
+.btn:hover { background: var(--gift); border-color: var(--gift); color: var(--accent-ink); }
+.btn:focus-visible { outline: 2px solid var(--gift); outline-offset: 2px; }
+.btn:active { transform: scale(.985); }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+
+footer { display: grid; gap: 7px; font-size: 11.5px; color: var(--muted); line-height: 1.75; }
+footer a { color: var(--muted); }
+footer p { margin: 0; }
+
+.cover {
+  width: 100%; max-width: 360px; justify-self: center; display: block; aspect-ratio: 1;
+  border-radius: 10px; background: var(--surface); box-shadow: 0 22px 48px rgba(0,0,0,.55);
+}
+.tracks { margin: 0; padding: 14px 16px; list-style: none; display: grid; gap: 0;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px; counter-reset: t; }
+.tracks li { display: grid; grid-template-columns: 2.4em minmax(0,1fr); padding: 6px 0; border-top: 1px dashed var(--line); font-size: 14px; }
+.tracks li:first-child { border-top: 0; }
+.tracks li::before { counter-increment: t; content: counter(t, decimal-leading-zero);
+  font-family: var(--mono); font-size: 12px; color: var(--accent); line-height: 1.9; }
+.tracks .single { font-size: 11px; color: var(--gift); margin-left: 6px; }
+.btn--pending, .btn--pending:hover {
+  border: 1px dashed var(--line); color: var(--muted); background: transparent; cursor: default; transform: none;
+}
+.logo--text { background: #fff; color: #111; font-weight: 800; font-size: 14px; letter-spacing: .06em; }
+.store-only { font-size: 12.5px; color: var(--muted); line-height: 1.55; padding: 10px 12px;
+  border: 1px dashed var(--line); border-radius: 10px; text-align: center; }
+</style>
+</head>
+<body>
+<main class="page">
+<span class="pr">PR・このサイトはアフィリエイトリンクを含みます</span>
+<img class="cover" src="hola_leopardo_cover.jpg" alt="ザ・クロマニヨンズ『Hola! Leopardo』ジャケット" width="880" height="880">
+<header>
+<p class="eyebrow">ザ・クロマニヨンズ 19thアルバム</p>
+<h1>Hola! Leopardo</h1>
+<p class="release"><span class="day">2027.01.20</span><span class="word">水曜日 発売</span></p>
+</header>
+<div class="formats">
+<div class="format">
+<span class="kind">CD</span><span class="price">￥3,500（税込）</span>
+<span class="sub">初回仕様のみ紙ジャケット仕様（無くなり次第プラケースに切り替わります）／12曲収録</span>
+<span class="codes"><span>品番 BVCL-1575</span><span>JAN 4547366851656</span></span>
+</div>
+<div class="format">
+<span class="kind">12inchアナログ盤（完全生産限定）</span><span class="price">￥5,500（税込）</span>
+<span class="sub">’60年代フリップバックE式盤を可能な限り再現。180g重量盤</span>
+<span class="codes"><span>品番 BVJL-146</span><span>JAN 4547366851663</span></span>
+</div>
+</div>
+<div class="common">
+<span class="label">全国共通特典</span>
+<span class="name">オリジナルジャケット絵柄ステッカー</span>
+<span class="note">全国のCDショップ／オンラインショップ。対象店舗は後日発表です。</span>
+</div>
+<h2 class="section-title">ショップ別特典と購入</h2>
+<ul class="shops">
+<li class="shop">
+<div class="shop-head">
+<span class="logo logo--light"><img src="amazon_onlight.svg" alt="Amazon.co.jp"></span>
+<div class="gift">
+<span class="label">店舗特典</span>
+<span class="name">オリジナルメガジャケット</span>
+<span class="note">横24センチ×縦24センチ・商品ページは公開待ち</span>
+</div></div>
+<div class="buys">
+<span class="btn btn--pending" aria-disabled="true"><span>CD</span><span class="amount">準備中</span></span>
+<span class="btn btn--pending" aria-disabled="true"><span>12inch LP</span><span class="amount">準備中</span></span>
+</div></li>
+<li class="shop">
+<div class="shop-head">
+<span class="logo logo--light"><img src="rakutenbooksjapan_ondark.svg" alt="楽天ブックス"></span>
+<div class="gift">
+<span class="label">店舗特典</span>
+<span class="name">オリジナルアクリルキーホルダー</span>
+<span class="note">横5センチ×縦5センチ</span>
+</div></div>
+<div class="buys">
+<a class="btn btn--primary" href="https://hb.afl.rakuten.co.jp/ichiba/074490bb.1fd2d813.074490bc.e7e83ffe/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F18863300%2F&amp;m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F18863300%2F" target="_blank" rel="sponsored noopener"><span>CD</span><span class="amount">￥3,500</span></a>
+<a class="btn" href="https://hb.afl.rakuten.co.jp/ichiba/074490bb.1fd2d813.074490bc.e7e83ffe/?pc=https%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F18863301%2F&amp;m=https%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F18863301%2F" target="_blank" rel="sponsored noopener"><span>12inch LP</span><span class="amount">￥5,500</span></a>
+</div></li>
+<li class="shop">
+<div class="shop-head">
+<span class="logo logo--light"><img src="hmv.png" alt="HMV&amp;BOOKS online"></span>
+<div class="gift">
+<span class="label">店舗特典</span>
+<span class="name">オリジナルポストカード</span>
+<span class="note">商品ページは公開待ち</span>
+</div></div>
+<div class="buys">
+<span class="btn btn--pending" aria-disabled="true"><span>CD</span><span class="amount">準備中</span></span>
+<span class="btn btn--pending" aria-disabled="true"><span>12inch LP</span><span class="amount">準備中</span></span>
+</div></li>
+<li class="shop">
+<div class="shop-head">
+<span class="logo logo--light"><img src="sevennet.png" alt="セブンネットショッピング"></span>
+<div class="gift">
+<span class="label">店舗特典</span>
+<span class="name">オリジナルトートバッグ</span>
+<span class="note">約33センチ×34センチ×9センチ（持ち手 約2.5センチ×56センチ）</span>
+</div></div>
+<div class="buys">
+<a class="btn btn--primary" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3758624&amp;pid=892490642&amp;vc_url=https%3A%2F%2F7net.omni7.jp%2Fdetail%2F1320329972.html" target="_blank" rel="sponsored noopener"><span>CD</span><span class="amount">￥3,500</span></a>
+<a class="btn" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3758624&amp;pid=892490642&amp;vc_url=https%3A%2F%2F7net.omni7.jp%2Fdetail%2F1320329973.html" target="_blank" rel="sponsored noopener"><span>12inch LP</span><span class="amount">￥5,500</span></a>
+</div></li>
+<li class="shop">
+<div class="shop-head">
+<span class="logo logo--dark"><img src="sonymusiclogo.svg" alt="Sony Music Shop"></span>
+<div class="gift">
+<span class="label">店舗特典</span>
+<span class="name">オリジナルスマホサイズステッカー</span>
+<span class="note">横5.5センチ×縦9.1センチ</span>
+</div></div>
+<div class="buys">
+<a class="btn btn--primary" href="https://click.linksynergy.com/deeplink?id=vhDtF8bTnA0&amp;mid=2438&amp;murl=https%3A%2F%2Fwww.sonymusicshop.jp%2Fm%2Fitem%2FitemShw.php%3Fcd%3DBVCL000001575" target="_blank" rel="sponsored noopener"><span>CD</span><span class="amount">￥3,500</span></a>
+<a class="btn" href="https://click.linksynergy.com/deeplink?id=vhDtF8bTnA0&amp;mid=2438&amp;murl=https%3A%2F%2Fwww.sonymusicshop.jp%2Fm%2Fitem%2FitemShw.php%3Fcd%3DBVJL000000146" target="_blank" rel="sponsored noopener"><span>12inch LP</span><span class="amount">￥5,500</span></a>
+</div></li>
+<li class="shop">
+<div class="shop-head">
+<span class="logo logo--light"><img src="towerrecords_ondark.svg" alt="タワーレコード"></span>
+<div class="gift">
+<span class="label">店舗特典</span>
+<span class="name">特製缶バッチ</span>
+<span class="note">直径2.5センチ・全店（オンライン含む／一部店舗除く）</span>
+</div></div>
+<div class="buys">
+<a class="btn btn--primary" href="https://tower.jp/item/8191888" target="_blank" rel="noopener"><span>CD</span><span class="amount">￥3,500</span></a>
+<a class="btn" href="https://tower.jp/item/8191889" target="_blank" rel="noopener"><span>12inch LP</span><span class="amount">￥5,500</span></a>
+</div></li>
+<li class="shop">
+<div class="shop-head">
+<span class="logo logo--light"><img src="diskunion_square.svg" alt="ディスクユニオン"></span>
+<div class="gift">
+<span class="label">店舗特典</span>
+<span class="name">特製缶バッチ</span>
+<span class="note">直径2.5センチ・CDは缶バッチA／アナログ盤は缶バッチB</span>
+</div></div>
+<div class="buys">
+<a class="btn btn--primary" href="https://diskunion.net/detail/1009324459" target="_blank" rel="noopener"><span>CD</span><span class="amount">￥3,500</span></a>
+<a class="btn" href="https://diskunion.net/detail/1009324460" target="_blank" rel="noopener"><span>12inch LP</span><span class="amount">￥5,500</span></a>
+</div></li>
+<li class="shop">
+<div class="shop-head">
+<span class="logo logo--text">TSUTAYA</span>
+<div class="gift">
+<span class="label">店舗特典</span>
+<span class="name">オリジナルステッカーシート</span>
+<span class="note">横12センチ×縦12センチ・TSUTAYA RECORDS（一部店舗除く）</span>
+</div></div>
+<p class="store-only">店頭での予約・購入が対象です</p>
+</li>
+</ul>
+<h2 class="section-title">収録曲</h2>
+<ol class="tracks">
+<li><span>街道</span></li>
+<li><span>ケッチン</span></li>
+<li><span>スズメバチ</span></li>
+<li><span>映画 レコード パン屋さん</span></li>
+<li><span>シュバッパ シャンララ</span></li>
+<li><span>無鉄砲</span></li>
+<li><span>ジョニー・エスプレッソ<span class="single">先行シングル</span></span></li>
+<li><span>十円玉</span></li>
+<li><span>レッツゴー!ゼッツボー!!</span></li>
+<li><span>いただきます</span></li>
+<li><span>サイクロン</span></li>
+<li><span>バンドやる</span></li>
+</ol>
+<footer>
+<p>特典は先着です。数に限りがあり、無くなり次第終了となります。各特典の絵柄は後日発表です。</p>
+<p>Amazon.co.jp・楽天ブックスなどでは、同じ商品でも特典が付かない商品ページがあります。上のリンクは特典付きのページに揃えています。</p>
+<p>「準備中」のショップは、商品ページが公開され次第リンクを追加します。</p>
+<p>価格・在庫・特典の有無は各ショップのページでご確認ください。</p>
+<p>出典: <a href="https://www.cro-magnons.net/info/?587673" target="_blank" rel="noopener">ザ・クロマニヨンズ 公式インフォメーション</a></p>
+<p>※Amazonのアソシエイトとして、適格販売により収入を得ています。</p>
+</footer>
+</main>
+</body>
+</html>
